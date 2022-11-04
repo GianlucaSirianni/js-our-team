@@ -30,3 +30,21 @@ const team = [
     image: "barbara-ramos-graphic-designer.jpg",
   },
 ];
+
+let path = "./img/";
+
+for (let i = 0; i < team.length; i++) {
+  let currentElement = team[i];
+  //   console.log(currentElement.role);
+  document.getElementById("container").innerHTML += `
+    <div class="card">
+        <img src="${
+          path + currentElement.image
+        }" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">${currentElement.name}</h5>
+            <p class="card-text">${currentElement.role}</p>
+        </div>
+    </div>
+    `;
+}
